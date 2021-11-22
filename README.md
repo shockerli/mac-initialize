@@ -1,4 +1,7 @@
-# 程序员 Mac 开光指南
+# Mac 开光指南
+> 一份新 Mac 快速食用方法
+> 
+> 长期更新地址: https://github.com/shockerli/mac-initialize
 
 ## 键盘符号映射
 | 按键 | 符号 |
@@ -12,21 +15,9 @@
 
 ## 基础设施
 
-### 开启任何来源
-现在的 macOS 都有 SIP 保护，需要执行以下命令关闭：
-
-```shell
-sudo spctl --master-disable
-```
-
-然后才可以打开`任何来源`：`系统偏好设置 > 安全性与隐私 > 通用 > 任何来源`
-
-关于其他一些软件无法安装的问题，可参考这篇文章：
-
-https://www.macwk.com/article/macos-file-damage
-
-
 ### 触摸板操作设置
+> 让你的触摸板变的跟鼠标不同，治疗你的手指关节炎😄
+
 - `系统偏好设置 > 触控板 > 光标与点按`
     * `轻点来点按（勾选）`
     * <u>可单指轻点=鼠标左键点击、可双指轻点=鼠标右键点击</u>
@@ -40,6 +31,20 @@ https://www.macwk.com/article/macos-file-damage
     * `启动拖移（勾选）> 三指拖移`
     * <u>可三指拖动任何窗口的菜单栏进行移动</u>
 
+
+
+### 开启任何来源
+现在的 macOS 都有 SIP 保护，需要执行以下命令关闭：
+
+```shell
+sudo spctl --master-disable
+```
+
+然后才可以打开`任何来源`：`系统偏好设置 > 安全性与隐私 > 通用 > 任何来源`
+
+关于其他一些软件无法安装的问题，可参考这篇文章：
+
+https://www.macwk.com/article/macos-file-damage
 
 
 ### 修改主机名
