@@ -12,51 +12,51 @@
 
 ## 基础设施
 
-### 关闭 `SIP` 保护
-开启：`系统偏好设置 > 安全性与隐私 > 通用`中的`任何来源`：
+### 开启任何来源
+现在的 macOS 都有 SIP 保护，需要执行以下命令关闭：
+
 ```shell
 sudo spctl --master-disable
 ```
 
+然后才可以打开`任何来源`：`系统偏好设置 > 安全性与隐私 > 通用 > 任何来源`
 
-### 设置
+关于其他一些软件无法安装的问题，可参考这篇文章：
+
+https://www.macwk.com/article/macos-file-damage
+
+
+### 触摸板操作设置
 - `系统偏好设置 > 触控板 > 光标与点按`
-    `轻点来点按（勾选）`
+    * `轻点来点按（勾选）`
+    * <u>可单指轻点=鼠标左键点击、可双指轻点=鼠标右键点击</u>
 
 - `系统偏好设置 > 触控板 > 更多手势`
-    `App Expose（勾选）`
-    `在全屏幕显示的App之间轻扫（四指左右轻扫）`
+    * `App Expose（勾选）`
+    * `在全屏幕显示的App之间轻扫（四指左右轻扫）`
+    * <u>以上两个选项，将三指操作改为四指操作，是为了给「三指拖移」让路</u>
 
 - `系统偏好设置 > 辅助功能 > 指针控制 > 鼠标与触控板 > 触控板选项`
-    `启动拖移（勾选）> 三指拖移`
+    * `启动拖移（勾选）> 三指拖移`
+    * <u>可三指拖动任何窗口的菜单栏进行移动</u>
 
 
 
 ### 修改主机名
 > 就是为了好看点
+
 参考文章：https://shockerli.net/post/macos-hostname-scutil/
+
 `系统偏好设置 > 共享` => 修改`电脑名称`
 
 
 
 ### Xcode Command Line Tools
-> macOS 系统很多软件都需要用到的依赖工具
+> macOS 系统很多软件都需要用到的依赖工具，不安装的话连 Git 都没法用🙄
+
 ```shell
 xcode-select --install
 ```
-
-
-
-### 梯子
-
-#### V2rayU
-> 需要自己找账号
-https://github.com/yanue/V2rayU
-
-
-#### SetupVPN
-> 谷歌插件
-
 
 
 
@@ -66,6 +66,8 @@ https://github.com/Homebrew/install
 
 
 #### 镜像源
+> 因 GitHub 访问不稳定，可以直接参考清华大学镜像站的安装教程，简单快速。
+
 清华大学开源软件镜像站及教程: https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
 
 ```shell
@@ -119,33 +121,33 @@ brew tap --custom-remote --force-auto-update homebrew/command-not-found https://
 `Action`: `Send Escape Sequence`
 `Esc + b`
 
-![配置命令行单词跳转](media/16309837738839/16372943030276.jpg)
-
-
 
 #### iTerm2 快速隐藏和显示
-`Keys → Hotkey`，勾选`Show/hide all windows with a system-wide hotkey`，并设置快捷键，比如`command + .`
-
+`Keys → Hotkey`，勾选 `Show/hide all windows with a system-wide hotkey`，并设置快捷键，比如 `⌘ + .`
 
 
 
 ### Oh My Zsh
+`Oh My Zsh` 让 zsh 变得更好用、配置更简单。
+
 GitHub: https://github.com/ohmyzsh/ohmyzsh
 
-通过`curl`安装:
+- 通过`curl`安装
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-`Zsh` 设置为当前用户的默认 `Shell`:
+- 设置 zsh 为当前用户的默认 `Shell`:
 ```shell
 chsh -s /bin/zsh
 ```
 
-配置文件: `~/.zshrc`
+- 配置文件: `~/.zshrc`
 
-设置主题:
+- 设置主题
+
 支持的主题列表: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+
 在配置文件中，修改这一行:
 ```shell
 ZSH_THEME="robbyrussell"
@@ -199,19 +201,21 @@ brew install autojump
 
 
 
-
 ## 系统工具
 
 ### 腾讯柠檬清理
 > 腾讯的清理、卸载、流量、监控、开机启动管理等
 
-官网下载：https://lemon.qq.com
+官网免费下载：https://lemon.qq.com
 
+如果不放心的话，可以用 `App Cleaner & Uninstaller Pro`。
 
 
 ### 搜狗输入法
 官网下载：https://pinyin.sogou.com/mac/
-输入法配置：`系统偏好设置 > 键盘 > 输入法 > 删除无用的输入法`
+
+输入法配置：`系统偏好设置 > 键盘 > 输入法`：删除无用的输入法
+
 同步原配置：`偏好设置 > 登录账户 > 同步 > 配置同步 > 下载配置`
 
 
@@ -228,19 +232,34 @@ brew install autojump
 
 
 ### Alfred
-- Features > Web Search > 新增自定义搜索并关闭不需要的搜索
-- Features > Default Results > Setup fallback results > 设置使用搜索方式
-- Features > Clipboard History > 勾选需要剪贴板存储的内容（文本、图片、文件）及保存时间
-- Appearance > 选择 Alfred macOS 切换主题样式
+效率工具神器，可以快速的搜索本地应用、搜索本地文件、执行终端命令、浏览器搜索、打开网址、剪切板管理、翻译、文件管理、音乐控制等，也可以自定义工作流，与其他软件深度配合。
+
+软件小巧、性能强悍、高级功能需付费，配置同步可用 iCloud 或 Git 或自己想办法。
+
+官网：https://www.alfredapp.com
+
+#### 常用配置
+- `Features` > `Web Search` > 新增自定义搜索、关闭不需要的搜索
+- `Features` > `Default Results` > `Setup fallback results` > 设置使用搜索方式
+- `Features` > `Clipboard History` > 勾选需要剪贴板存储的内容（文本、图片、文件）及保存时间
+- `Appearance` > 选择 `Alfred macOS` 切换主题样式
+
+#### Workflows
+可参考下面两个收藏集合内的配置：
+- [learn-anything/alfred-workflows](https://github.com/learn-anything/alfred-workflows)
+- [zenorocha/alfred-workflows](https://github.com/zenorocha/alfred-workflows)
 
 
 ### uTools
-> 一个可替代 Alfred 大部分功能的国产辅助软件
+一个可替代 Alfred 大部分功能的国产效率工具，基于 Electron 构建（劣势）、自带插件市场（优势）、配置同步需开通会员订阅。
+
+如果是轻度用户，可选择 uTools，简单。当然，Alfred 与 uTools 同时安装并不冲突。
 
 官方下载：http://www.u.tools
 
 #### 设置
 - 快捷键
+
 `偏好设置` > `基本设置` > `快捷键` > `显示/隐藏快捷键` > `Option + Space`
 
 
@@ -318,9 +337,9 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `网易有道词典`：翻译（免费）
 - `iShot`：截图（免费）
 - `嘀嗒清单`：时间与日程管理
-- `MWeb`/`Typora`/`FSNotes`：Markdown 笔记管理
+- `MWeb` / `Typora` / `FSNotes`：Markdown 笔记管理
 - `FastZip/MacZip`：解压缩（免费）
-- `NTFSTool`：NTFS格式硬盘读写（开源，但停更了，不支持 macOS >= 11.0）
+- `NTFSTool`：NTFS 格式硬盘读写（开源，但停更了，不支持 macOS >= 11.0）
 - `OmniGraffle Pro`：图表/流程图等矢量图绘制
 - `Sketch`：矢量图绘制
 - `Axure RP`：交互原型设计
