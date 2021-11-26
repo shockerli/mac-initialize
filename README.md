@@ -66,40 +66,15 @@ xcode-select --install
 
 
 ### Homebrew
-https://brew.sh/index_zh-cn
-https://github.com/Homebrew/install
+macOS 最强大的软件包安装管理器。
+
+官网：https://brew.sh
+GitHub：https://github.com/Homebrew/brew
 
 
-#### 镜像源
-> 因 GitHub 访问不稳定，可以直接参考清华大学镜像站的安装教程，简单快速。
+因国内访问 GitHub 不稳定，可以直接参考清华大学镜像站的安装教程，简单快速。
 
-清华大学开源软件镜像站及教程: https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
-
-```shell
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
-```
-
-
-#### 安装
-```shell
-# 从本镜像下载安装脚本并安装 Homebrew / Linuxbrew
-git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
-/bin/bash brew-install/install.sh
-rm -rf brew-install
-```
-
-
-#### cask 等其他仓库
-```shell
-brew tap --custom-remote --force-auto-update homebrew/core https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-brew tap --custom-remote --force-auto-update homebrew/cask https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
-brew tap --custom-remote --force-auto-update homebrew/cask-fonts https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-fonts.git
-brew tap --custom-remote --force-auto-update homebrew/cask-drivers https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-drivers.git
-brew tap --custom-remote --force-auto-update homebrew/cask-versions https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-versions.git
-brew tap --custom-remote --force-auto-update homebrew/command-not-found https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-command-not-found.git
-```
+清华大学开源软件镜像站及安装、镜像教程: https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
 
 
 
@@ -229,11 +204,22 @@ brew install autojump
 
 #### 扩展
 - Infinity New Tab Pro: 新标签页
-- FeHelper: 前端工具集
+- FeHelper: 前端工具集（内含JSON美化对比、时间转换、编码转换等几十个小工具）
 - Adblock Plus: 广告净化
 - SimpRead: 最佳阅读体验
-- Tampermonkey: 油猴脚本
+- Tampermonkey: 油猴脚本管理
 - ImageAssistant: 图片助手，网页图片提取下载
+
+#### 油猴脚本
+油猴脚本（用户脚本）是一段代码，它们能够优化您的网页浏览体验。安装之后，有些脚本能为网站添加新的功能，有些能使网站的界面更加易用，有些则能隐藏网站上烦人的部分内容。
+
+[Tampermonkey](https://www.tampermonkey.net) 是一个可运行在 Chrome、Firefox、Safari、Edge 等浏览器的用户脚本管理扩展。
+
+[Greasy Fork](https://greasyfork.org) 则是一个油猴脚本免费商店，绝大部分用户脚本都在上面有发布，方便查找、安装使用。
+
+推荐脚本：
+- [Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved) - B站增强
+- [CSDNGreener](https://github.com/adlered/CSDNGreener) - CSDN 网站绿化
 
 
 ### Alfred
@@ -321,6 +307,7 @@ server_name|192.168.1.110|root|password|port|is_bastion
 - `Postman`：接口调试（免费）
 - `htop`：增强版 `top` 命令（[开源](https://github.com/htop-dev/htop)）
 - `Visual Studio Code`：强大的编辑器（[开源](https://code.visualstudio.com)）
+- `Charles` / `Proxyman`：代理抓包工具
 
 
 #### Sublime Text
