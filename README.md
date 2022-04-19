@@ -3,24 +3,49 @@
 > 
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 
-## 键盘符号映射
+
+## 键盘符号与快捷键
+### 符号映射
 | 按键 | 符号 |
 | --- | --- |
-| Command | ⌘ |
+| Command（Cmd） | ⌘ |
 | Shift | ⇧ |
-| Option | ⌥ |
-| Control | ^ |
+| Option（Alt） | ⌥ |
+| Control（Ctrl） | ^ |
 | Caps Lock | ⇪ |
+
+
+### 常用快捷键
+大部分情况下，Command 键等同于 Windows 的 Ctrl 键，以下仅列出部分常用或与 Windows 不一样的快捷键，更多参考官方 [Mac 键盘快捷键](https://support.apple.com/zh-cn/HT201236)
+
+- **Command-Z**：撤销，Shift-Command-Z：重做
+- **Command-Tab**：在多个打开的 App 之间切换到下一个最近使用的 App
+- **Command-逗号 (,)**：打开最前面的应用的偏好设置
+- **Control-Command-Q**：立即锁定屏幕
+- **Command-D**：复制所选文件
+- **Option-Command-D**：显示或隐藏“程序坞”
+- **Command–上箭头**：打开包含当前文件夹的文件夹
+- **Command–左中括号 ([)**：前往上一文件夹
+- **Command–右中括号 (])**：前往下一个文件夹
+- **Command-Delete**：将所选项移到废纸篓
+- **Control–下箭头**：显示最前面的应用的所有窗口
+- **Control-Command-D**：显示或隐藏所选字词的定义
+- **Control–A**：移至行或段落的开头
+- **Control–E**：移至行或段落的末尾
+
+其他快捷键：选取苹果菜单 > “系统偏好设置”，点按“键盘”，然后点按“快捷键”。
 
 
 ## 基础设施
 
 ### 触摸板操作设置
+触控板的设置及使用教程，可查看 `系统偏好设置 > 触控板`。
+
 > 让你的触摸板变的跟鼠标不同，治疗你的手指关节炎😄
 
 - `系统偏好设置 > 触控板 > 光标与点按`
     * `轻点来点按（勾选）`
-    * <u>可单指轻点=鼠标左键点击、可双指轻点=鼠标右键点击</u>
+    * <u>可单指轻点=鼠标左键点击，可双指轻点=鼠标右键点击</u>
 
 - `系统偏好设置 > 触控板 > 更多手势`
     * `App Expose（勾选）`
@@ -29,7 +54,7 @@
 
 - `系统偏好设置 > 辅助功能 > 指针控制 > 鼠标与触控板 > 触控板选项`
     * `启动拖移（勾选）> 三指拖移`
-    * <u>可三指拖动任何窗口的菜单栏进行移动</u>
+    * <u>与鼠标左键按住拖动一样，三个手指同时在触摸板滑动，可拖动任何窗口的菜单栏进行移动，也可以选择范围内容</u>
 
 
 
@@ -203,12 +228,14 @@ brew install autojump
 官网下载: https://www.google.cn/intl/zh-CN/chrome/
 
 #### 扩展
-- Infinity New Tab Pro: 新标签页
-- FeHelper: 前端工具集（内含JSON美化对比、时间转换、编码转换等几十个小工具）
-- Adblock Plus: 广告净化
-- SimpRead: 最佳阅读体验
-- Tampermonkey: 油猴脚本管理
-- ImageAssistant: 图片助手，网页图片提取下载
+- [Infinity New Tab Pro](http://cn.infinitynewtab.com): 新标签页
+- [FeHelper](https://www.baidufe.com/fehelper): 前端工具集（内含 JSON 美化对比、时间转换、编码转换等十几个小工具）
+- [Adblock Plus](https://adblockplus.org): 广告净化
+- [SimpRead](http://ksria.com/simpread): 最佳阅读体验
+- [Tampermonkey](https://www.tampermonkey.net): 油猴脚本管理
+- [ImageAssistant](http://www.pullywood.com/ImageAssistant): 图片助手，网页图片提取下载
+- [SourceGraph.com](https://sourcegraph.com): GitHub 源码浏览神器
+
 
 #### 油猴脚本
 油猴脚本（用户脚本）是一段代码，它们能够优化您的网页浏览体验。安装之后，有些脚本能为网站添加新的功能，有些能使网站的界面更加易用，有些则能隐藏网站上烦人的部分内容。
