@@ -75,7 +75,7 @@ https://www.macwk.com/article/macos-file-damage
 ### 修改主机名
 > 就是为了好看点
 
-参考文章：https://shockerli.net/post/macos-hostname-scutil/
+参考文章: https://shockerli.net/post/macos-hostname-scutil/
 
 `系统偏好设置 > 共享` => 修改`电脑名称`
 
@@ -93,8 +93,9 @@ xcode-select --install
 ### Homebrew
 macOS 最强大的软件包安装管理器。
 
-官网：https://brew.sh
-GitHub：https://github.com/Homebrew/brew
+官网: https://brew.sh
+
+GitHub: https://github.com/Homebrew/brew
 
 
 因国内访问 GitHub 不稳定，可以直接参考清华大学镜像站的安装教程，简单快速。
@@ -104,9 +105,9 @@ GitHub：https://github.com/Homebrew/brew
 
 
 ### iTerm2
-安装：https://www.iterm2.com
+安装: https://www.iterm2.com
 
-主题站点：https://iterm2colorschemes.com
+主题站点: https://iterm2colorschemes.com
 
 主题选择：`Profiles -> Colors -> Color Presets` 选择 `Solarized Dark`
 
@@ -211,13 +212,13 @@ brew install autojump
 ### 腾讯柠檬清理
 > 腾讯的清理、卸载、流量、监控、开机启动管理等
 
-官网免费下载：https://lemon.qq.com
+官网免费下载: https://lemon.qq.com
 
 如果不放心的话，可以用 `App Cleaner & Uninstaller Pro`。
 
 
 ### 搜狗输入法
-官网下载：https://pinyin.sogou.com/mac/
+官网下载: https://pinyin.sogou.com/mac/
 
 输入法配置：`系统偏好设置 > 键盘 > 输入法`：删除无用的输入法
 
@@ -254,7 +255,7 @@ brew install autojump
 
 软件小巧、性能强悍、高级功能需付费，配置同步可用 iCloud 或 Git 或自己想办法。
 
-官网：https://www.alfredapp.com
+官网: https://www.alfredapp.com
 
 #### 常用配置
 - `Features` > `Web Search` > 新增自定义搜索、关闭不需要的搜索
@@ -269,11 +270,11 @@ brew install autojump
 
 
 ### uTools
-一个可替代 Alfred 大部分功能的国产效率工具，基于 Electron 构建（劣势）、自带插件市场（优势）、配置同步需开通会员订阅。
+一个可替代 **Alfred** 大部分功能的国产效率工具，基于 Electron 构建（劣势）、自带插件市场（优势）、配置同步需开通会员订阅。
 
 如果是轻度用户，可选择 uTools，简单。当然，Alfred 与 uTools 同时安装并不冲突。
 
-官方下载：http://www.u.tools
+官方下载: http://www.u.tools
 
 #### 设置
 - 快捷键
@@ -334,7 +335,7 @@ server_name|192.168.1.110|root|password|port|is_bastion
 - `Postman`：接口调试（免费）
 - `htop`：增强版 `top` 命令（[开源](https://github.com/htop-dev/htop)）
 - `Visual Studio Code`：强大的编辑器（[开源](https://code.visualstudio.com)）
-- `Charles` / `Proxyman`：代理抓包工具
+- `Proxyman`：代理抓包工具（免费）
 
 
 #### Sublime Text
@@ -365,6 +366,7 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `Reeder`：RSS 订阅
 - `IINA`：音视频播放器（[开源](https://github.com/iina/iina)）
 - `Beyond Compare`：文件/文本对比
+- `Rectangle` - 窗口整理/分屏（[开源](https://github.com/rxhanson/Rectangle)）
 
 
 
