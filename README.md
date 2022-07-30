@@ -277,16 +277,6 @@ chsh -s /bin/zsh
 ```
 
 
-- 设置主题
-
-支持的主题列表: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
-
-在配置文件中，修改这一行:
-```shell
-ZSH_THEME="robbyrussell"
-```
-
-
 #### 插件
 
 ##### zsh-autosuggestions
@@ -342,27 +332,18 @@ brew install autojump
 ```
 
 
-#### 主题配置
+#### 主题
 主题列表: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+内置主题: `$ZSH/themes`（`$HOME/.oh-my-zsh/themes`）
+
+修改 `~/.zshrc` 配置文件：
 
 ```shell
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+ZSH_THEME="robbyrussell"
 ```
 
-如果 GitHub 访问不畅，可用 Gitee 替代：
-```shell
-git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-打开 `~/.zshrc`，设置主题 `ZSH_THEME="powerlevel10k/powerlevel10k"`。
-
-重载配置 `source ~/.zshrc`，会自动弹出 `Powerlevel10k` 配置向导（`configuration wizard`）。配置文件放在 `~/.p10k.zsh`，可手动编辑。
-
-可执行命令 `p10k configure` 重新触发配置向导。
-
-如果下载字段很慢或失败，可[手动安装字体](https://github.com/romkatv/powerlevel10k#manual-font-installation)后，再重新配置。
+可在 `$ZSH/custom/themes` 下自定义主题。
 
 
 ### Git
