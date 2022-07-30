@@ -6,6 +6,8 @@
 > 系统和软件的更新，部分内容可能没有及时更新，故操作界面或步骤会略有差别，但影响不大。
 > 
 > 长期更新地址: https://github.com/shockerli/mac-initialize
+> 
+> 更新于 2022.07.30
 
 
 ## 应用安装
@@ -20,6 +22,7 @@
 
 ### 桌面上的安装包图标怎么去除？
 - 方法①：桌面上右键安装包图标，选择「推出“XXX”」。
+
 ![移除桌面安装包镜像图标](assets/remove-desktop-icon.png)
 
 - 方法②：Finder（访达）左栏的「位置」处也有对应安装包，点按应用名称右侧的推出图标即可。
@@ -135,14 +138,17 @@ https://www.macwk.com/article/macos-file-damage
 
 #### 时钟
 默认时间格式太长，去除不必要的。
+
 `系统偏好设置 > 程序坞与菜单栏 > 时钟 > 显示日期（取消勾选）、显示星期（取消勾选）、在时间中显示秒钟（勾选）`
 
 #### 聚焦
 不需要在菜单栏展示，有快捷键 `⌘ + 空格`。
+
 `系统偏好设置 > 程序坞与菜单栏 > 聚焦 > 在菜单栏中显示（取消勾选）`
 
 #### Siri
 不需要在菜单栏展示，可配置快捷键或语音指令。
+
 `系统偏好设置 > Siri`，自行配置「听取“嘿Siri”」、快捷键等。
 
 
@@ -167,7 +173,9 @@ GitHub: https://github.com/Homebrew/brew
 
 因国内访问 GitHub 不稳定，可以直接参考清华大学镜像站的安装教程，简单快速、此处不做复述。
 
-清华大学开源软件镜像站及安装、镜像教程: https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
+清华大学开源软件镜像站及安装、镜像教程：
+
+https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
 
 
 
@@ -193,11 +201,13 @@ GitHub: https://github.com/Homebrew/brew
 `Profiles` 用于配置新建 Tab 的默认行为，而 `Profiles` 中的 Command 则可用于配置新建 Tab 时自动执行的命令，一般用于 SSH 远程连接的场景较多。
 
 Profiles Command 配置：
+
 ![iTerm2 Profiles Command 配置](assets/iterm-profile-setting.jpg)
 
 注意：自定义的 Profile 会继承 `Default` 的配置，故自定义的 Profile 无需重复去配置颜色、主题、快捷键等。
 
 Profiles 使用及快捷键：
+
 ![iTerm2 Profiles 使用及快捷键](assets/iterm-profile-usage.jpg)
 
 
@@ -418,7 +428,7 @@ cat ~/.ssh/id_rsa.pub
     例如 [CSDNGreener](https://greasyfork.org/zh-CN/scripts/378351)，打开后会显示安装按钮和界面
 - 从 URL 安装
     例如 Bilibili-Evolved 的脚本 URL 是 https://raw.githubusercontent.com/the1812/Bilibili-Evolved/master/dist/bilibili-evolved.user.js
-    直接在 Tampermonkey 管理面板 > 实用工具 > 从 URL 安装，粘贴脚本 URL，点击安装即可
+    直接在 Tampermonkey `管理面板 > 实用工具 > 从 URL 安装`，粘贴脚本 URL，点击安装即可
 
 **推荐脚本**：
 - [Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved) - B站增强 [[脚本 URL]](https://raw.githubusercontent.com/the1812/Bilibili-Evolved/master/dist/bilibili-evolved.user.js)
@@ -529,7 +539,8 @@ server_name|192.168.1.110|root|password|port|is_bastion
 
 #### Sublime Text
 安装 `Package Control`: https://packagecontrol.io/installation
-安装中文插件: `ChineseLocalizations`
+
+中文插件: `ChineseLocalizations`
 
 - 配置 `subl` 命令行打开文件
 
@@ -539,6 +550,7 @@ server_name|192.168.1.110|root|password|port|is_bastion
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 ```
 
+然后就可以使用 `subl [path]` 快捷打开文件或目录。
 
 
 ### 其他软件
@@ -572,8 +584,8 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 下载地址: https://www.oracle.com/java/technologies/downloads
 
 根据 CPU 选择包：
-- Intel: `x64 DMG Installer`
-- Apple Silicon: `Arm 64 DMG Installer`
+- **Intel**: `x64 DMG Installer`
+- **Apple Silicon**: `Arm 64 DMG Installer`
 
 下载安装，然后验证：
 ```shell
@@ -645,6 +657,7 @@ sudo mv composer /usr/local/bin
 ```
 
 - 降级
+
 如果一些老项目不支持 Composer V2，那么需要回退到 V1 版本
 ```shell
 composer self-update --1
