@@ -20,6 +20,13 @@
 
 有一些软件，是没有上架应用商店（如搜狗输入法）、或应用商店里的是阉割版本（如柠檬清理），就需要去官网下载。
 
+下载软件时，尽量选择与架构匹配的，不要选 `Universal`，因为 `Universal` 会同时包含两个架构的软件包，体积更大但却没啥用。以下图 VSCode 为例，如果是 M1/M2 等苹果芯片则选 `Apple Silicon`，反之则选 `Intel Chip`。
+
+![vscode-select-mac-platform](assets/select-app-platform.jpg)
+
+当然，目前绝大多数的软件是不支持这么选择的，也就是只提供了一个 `Universal` 通用版本，那安装后，电脑里就会多一个架构的软件，可以使用[柠檬清理](https://lemon.qq.com)进行查找清理掉，不影响正常使用。
+
+
 ### 桌面上的安装包图标怎么去除？
 - 方法①：桌面上右键安装包图标，选择「推出“XXX”」。
 
@@ -173,9 +180,7 @@ GitHub: https://github.com/Homebrew/brew
 
 因国内访问 GitHub 不稳定，可以直接参考清华大学镜像站的安装教程，简单快速、此处不做复述。
 
-清华大学开源软件镜像站及安装、镜像教程：
-
-https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
+清华大学开源软件镜像站及安装、镜像教程: https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
 
 
 
@@ -383,14 +388,12 @@ cat ~/.ssh/id_rsa.pub
 
 ## 系统工具
 
-### 腾讯柠檬清理
-> 腾讯的清理、卸载、流量、监控、开机启动管理等
+### 柠檬清理
+> 腾讯出品开源免费的清理、卸载、流量、监控、磁盘空间分析、开机启动管理等系统工具
 
-官网免费下载: https://lemon.qq.com
+官网下载: https://lemon.qq.com
 
-已开源
-
-如果不放心的话，可以用 `App Cleaner & Uninstaller Pro`。
+开源地址: https://github.com/Tencent/lemon-cleaner
 
 
 ### 搜狗输入法
@@ -537,6 +540,20 @@ server_name|192.168.1.110|root|password|port|is_bastion
 - `Proxyman`: 代理抓包工具（免费）
 
 
+#### Visual Studio Code
+官网下载: https://code.visualstudio.com
+
+
+##### 配置终端 code 快捷打开
+安装 `code` 命令，支持在终端快捷打开 `VSCode`。
+
+快捷键 `⌘ + ⇧ + P` 打开命令面板，输入 `shell`，选择 `Shell Command: Install 'code' command in PATH`。
+
+![install-code-command-in-path](assets/install-code-in-path.jpg)
+
+然后在终端输入 `code .` 或者 `code [path]` 直接在 `VSCode` 打开文件或目录。
+
+
 #### Sublime Text
 安装 `Package Control`: https://packagecontrol.io/installation
 
@@ -569,6 +586,7 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `IINA`：音视频播放器（[开源](https://github.com/iina/iina)）
 - `Beyond Compare`：文件/文本对比
 - `Rectangle` - 窗口整理/分屏（[开源](https://github.com/rxhanson/Rectangle)）
+- `休息一下`：定时锁屏提醒休息
 
 
 
