@@ -46,7 +46,7 @@
 - `App Store → 偏好设置 → 自动更新（取消勾选）、自动下载站其他设备上购买的App（取消勾选）`
 
 删除已下载的文件：
-- 关闭 `SIP`、删除目录 `/Library/Updates` 下的内容。
+- 关闭 `SIP`、删除目录 `/Library/Updates` 下的内容、再开启 `SIP`。
 
 进程 `nsurlsessiond` 会偷偷跑流量，有几个原因：
 - 正在下载系统或软件更新文件
