@@ -1,7 +1,7 @@
 # Mac 开光指南（V2）
 💻 一份新 macOS 快速食用方法，普适新 Mac 或重装系统。
 
-> 本文基于 MBP 14寸（2021）12.3 系统和 MBP 13寸（2014）11.4 系统。
+> 本文基于 MBP 14寸（2021）12.3 系统（**主**）和 MBP 13寸（2014）11.4 系统。
 >
 > 系统和软件的更新，部分内容可能没有及时更新，故操作界面或步骤会略有差别，但影响不大。
 >
@@ -309,7 +309,7 @@ GitHub: https://github.com/ohmyzsh/ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-- 设置 zsh 为当前用户的默认 `Shell`:
+- 设置 `zsh` 为当前用户的默认 `Shell`
 ```shell
 chsh -s /bin/zsh
 ```
@@ -654,11 +654,34 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 ## 开发环境
 
 ### Java
-> Java SE Development Kit
-> 
+#### JDK
+- `JVM`：`Java Virtual Machine`
+- `JRE`：`Java Runtime Environment`
+- `JDK`：`Java SE Development Kit`
+- `SDK`：`Software Development Kit`
+
+```
+  ┌─    ┌──────────────────────────────────┐
+  │     │     Compiler, debugger, etc.     │
+  │     └──────────────────────────────────┘
+ JDK ┌─ ┌──────────────────────────────────┐
+  │  │  │                                  │
+  │ JRE │      JVM + Runtime Library       │
+  │  │  │                                  │
+  └─ └─ └──────────────────────────────────┘
+        ┌───────┐┌───────┐┌───────┐┌───────┐
+        │Windows││ Linux ││ macOS ││others │
+        └───────┘└───────┘└───────┘└───────┘
+
+图源自：https://www.liaoxuefeng.com/wiki/1252599548343744/1255876875896416
+```
+
+##### OracleJDK
 > 仅 JDK 17 及以上版本才支持 Apple Silicon。
 > 
-> JDK 8 需登录 Oracle 账户才能下载。
+> JDK 8 需登录 Oracle 账户才能下载，且没有 ARM 版本。（虽然 x64 版本也可以安装使用，但不清楚是否存在问题）
+> 
+> 不是很推荐使用 OracleJDK，因为其协议已改为 [OTN](https://www.oracle.com/java/technologies/javase/jdk-faqs.html)
 
 下载地址: https://www.oracle.com/java/technologies/downloads
 
@@ -677,6 +700,137 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.311-b11, mixed mode)
 配置 `JAVA_HOME` 环境变量：
 ```shell
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home
+```
+
+##### OpenJDK
+OpenJDK 是 Sun 在 2006 年开源的 Java SE 免费开源版本，采用 `GPLv2+CE` 许可协议。该项目由 Oracle 主导，IBM、红帽、微软等均有参与。
+
+官网: https://openjdk.org
+
+- Homebrew 安装
+```shell
+// 搜索
+brew search openjdk
+
+// 安装
+// 苹果芯片不一定支持老版本，失败则可考虑安装 Zulu 版本
+brew install openjdk@8
+
+// 配置
+sudo ln -sfn /opt/homebrew/opt/openjdk@8/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk
+```
+
+- Zulu 安装
+
+下载对应版本: https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk
+
+对应的安装教程: https://docs.azul.com/core/zulu-openjdk/install/macos
+
+```shell
+➜ java -version
+openjdk version "1.8.0_342"
+OpenJDK Runtime Environment (Zulu 8.64.0.15-CA-macos-aarch64) (build 1.8.0_342-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.64.0.15-CA-macos-aarch64) (build 25.342-b07, mixed mode)
+```
+
+对应的 `JAVA_HOME` 在 `/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home`
+
+
+##### SDKMAN
+一个专门安装、管理 SKD 的跨平台 Shell 脚本软件，支持几乎所有厂商的 JDK 及常用 SDK。
+
+官网及教程: https://sdkman.io
+
+以 JDK 为例，其他 SDK 类似。
+
+- 安装 SDKMAN
+
+```shell
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+```
+
+安装目录 `$HOME/.sdkman`
+
+- 查看支持的 JDK 版本列表
+
+```shell
+
+================================================================================
+Available Java Versions for macOS ARM 64bit
+================================================================================
+ Vendor        | Use | Version      | Dist    | Status     | Identifier
+--------------------------------------------------------------------------------
+ Java.net      |     | 20.ea.9      | open    |            | 20.ea.9-open
+               |     | 20.ea.8      | open    |            | 20.ea.8-open
+               |     | 19.ea.34     | open    |            | 19.ea.34-open
+               |     | 19.ea.33     | open    |            | 19.ea.33-open
+               |     | 18.0.2       | open    |            | 18.0.2-open
+               |     | 18.0.1.1     | open    |            | 18.0.1.1-open
+ Microsoft     |     | 17.0.4       | ms      |            | 17.0.4-ms
+               |     | 17.0.3       | ms      |            | 17.0.3-ms
+               |     | 11.0.16      | ms      |            | 11.0.16-ms
+               |     | 11.0.15      | ms      |            | 11.0.15-ms
+ Oracle        |     | 18.0.2       | oracle  |            | 18.0.2-oracle
+               |     | 18.0.1       | oracle  |            | 18.0.1-oracle
+               |     | 17.0.4       | oracle  |            | 17.0.4-oracle
+               |     | 17.0.3       | oracle  |            | 17.0.3-oracle
+```
+
+
+- 安装 JDK
+
+```shell
+// OracleJDK
+sdk install java x.y.z-oracle
+
+// OpenJDK
+sdk install java x.y.z-open
+```
+
+- 查看切换默认 JDK 版本
+
+```shell
+// 查看当前版本
+sdk current java
+
+// 切换默认版本
+sdk default java x.y.z-open
+```
+
+##### JAVA_HOME
+查看已安装版本的 `JAVA_HOME`：
+```shell
+/usr/libexec/java_home
+
+/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+```
+
+查看指定版本的 `JAVA_HOME`：
+```shell
+/usr/libexec/java_home -v8
+
+/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+```
+
+单个版本配置（`~/.zshrc`）：
+```shell
+export JAVA_HOME=$(/usr/libexec/java_home -v8)
+```
+
+多版本配置：
+```shell
+# Java Home
+export JAVA_HOME=$(/usr/libexec/java_home -v11)
+export JAVA_8_HOME=$(/usr/libexec/java_home -v8)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+
+# 默认为 Java 8
+java8
 ```
 
 
