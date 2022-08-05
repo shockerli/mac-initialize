@@ -1,13 +1,17 @@
 # Mac 开光指南（V2）
-> 一份新 macOS 快速食用方法，普适新 Mac 或重装系统。
->
+💻 一份新 macOS 快速食用方法，普适新 Mac 或重装系统。
+
 > 本文基于 MBP 14寸（2021）12.3 系统和 MBP 13寸（2014）11.4 系统。
-> 
+>
 > 系统和软件的更新，部分内容可能没有及时更新，故操作界面或步骤会略有差别，但影响不大。
-> 
+>
+> 本指南涉及内容较广，请选择适合自己的操作。
+>
+> 本指南遵循许可协议 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)（请看[转载要求](https://shockerli.net/reprint-protocol)）
+>
 > 长期更新地址: https://github.com/shockerli/mac-initialize
-> 
-> 更新于 2022.07.31
+>
+> 最后更新于 `2022-08-05`
 
 
 ## 应用安装
@@ -740,8 +744,26 @@ composer self-update --1
 
 - 镜像
 ```shell
-composer config -g repo.packagist composer https://packagist.phpcomposer.com
+// 设置镜像
+composer config -g repo.packagist composer [mirrors-url]
+
+// 取消镜像
+composer config -g --unset repos.packagist
 ```
+
+```
+// 阿里云
+官网: https://developer.aliyun.com/composer
+镜像: https://mirrors.aliyun.com/composer/
+
+// 腾讯云
+// 出现过composer.lock文件中dist.reference与dist.url下载不一致的情况
+// 即reference是最新commit，但镜像url下载的包却不非最新
+官网: https://mirrors.cloud.tencent.com/help/composer.html
+镜像: https://mirrors.cloud.tencent.com/composer/
+```
+
+其他镜像不是很稳定、或不是很全（一些下载量小的会 `404`），如有问题，轮换着试试。
 
 
 ### Go
