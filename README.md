@@ -11,7 +11,7 @@
 >
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 >
-> 最后更新于 `2022-08-05`
+> 最后更新于 `2022-08-08`
 
 
 ## 应用安装
@@ -175,6 +175,7 @@ https://www.macwk.com/article/macos-file-damage
 从程序坞中挨个移除你不行要的应用图标，以及添加你希望常驻的图标。
 
 **移除**：`右键程序坞中应用图标 > 选项 > 从程序坞中移除`
+
 ![移除程序坞图标](assets/remove-dock-icon.png)
 
 **添加**：从启动台（应用全列表）拖动图标到程序坞指定位置
@@ -216,6 +217,7 @@ xcode-select --install
 ```
 
 同意协议后会全程自动下载安装，文件比较大，需要等待一会。
+
 ![install-xcode-select](assets/install-xcode-select.png)
 
 
