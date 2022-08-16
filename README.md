@@ -9,9 +9,11 @@
 >
 > 本指南遵循许可协议 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)（请看[转载要求](https://shockerli.net/reprint-protocol)）
 >
+> 博客原文地址: https://shockerli.net/post/mac-initialize
+>
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 >
-> 最后更新于 `2022-08-08`
+> 最后更新于 `2022-08-16`
 
 
 ## 应用安装
@@ -503,37 +505,15 @@ cat ~/.ssh/id_rsa.pub
 #### 常用配置
 - `Features` > `Web Search` > 新增自定义搜索、关闭不需要的搜索
 - `Features` > `Default Results` > `Setup fallback results` > 设置使用搜索方式
-- `Features` > `Clipboard History` > 勾选需要剪贴板存储的内容（文本、图片、文件）及保存时间
-- `Appearance` > 选择 `Alfred macOS` 切换主题样式
+- `Features` > `Clipboard History` > 勾选需要剪贴板存储的内容（文本、图片、文件）及保留时间
+- `Appearance` > 选择 `Alfred macOS` 切换主题样式，也可以自定义
+- `Appearance` > `Options` > `Show Alfred on`：选择 `active screen` 或 `mouse screen`，因为默认为 `default screen` 即在默认显示屏打开 Alfred 窗口，多屏或多显示器时默认设置不够贴心。
 
 #### Workflows
 可参考下面两个收藏集合内的配置：
 - [learn-anything/alfred-workflows](https://github.com/learn-anything/alfred-workflows)
 - [zenorocha/alfred-workflows](https://github.com/zenorocha/alfred-workflows)
 
-
-### uTools
-一个可替代 **Alfred** 大部分功能的国产效率工具，基于 Electron 构建（劣势）、自带插件市场（优势）、配置同步需开通会员订阅。
-
-如果是轻度用户，可选择 `uTools`，简单。当然，Alfred 与 uTools 同时安装并不冲突。
-
-官网下载: http://www.u.tools
-
-#### 设置
-- 快捷键
-
-`偏好设置` > `基本设置` > `快捷键` > `显示/隐藏快捷键` > `Option + Space`
-
-
-#### 插件
-- hosts切换
-- 编码小助手
-- 计算稿纸
-- 网页打开
-- 剪切板
-- 有道翻译
-- 程序员手册
-- FileShare文件共享（局域网）
 
 
 ### Shell Alias
