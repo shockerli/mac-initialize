@@ -13,7 +13,7 @@
 >
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 >
-> 最后更新于 `2022-08-16`
+> 最后更新于 `2022-09-08`
 
 
 ## 应用安装
@@ -68,6 +68,7 @@
 | ⇪ | Caps Lock |
 | ⌥ | Option = Alt |
 | ⌃ | Control |
+| Fn | 功能键 |
 | ↩ | Enter |
 | ⌫ | Delete |
 | ⌦ | Fn + Delete |
@@ -83,6 +84,8 @@
 | ⇤ | Shift + Tab = 左制表符 |
 | ⎋ | Esc = Escape |
 | ⏏ | 电源开关键 |
+
+
 
 一定要熟记前 5 个符号的按键位置！！！
 
@@ -168,7 +171,11 @@ https://www.macwk.com/article/macos-file-damage
 同理，如果不想「自动纠正拼写」或其他输入相关的功能，也可在此面板一并调整。
 
 
-### 程序坞
+### 程序坞（Dock）
+![mac-icon-dock](assets/mac-icon-dock.png)
+
+`程序坞(Dock)` 是 macOS 桌面上日常 APP 和功能的便利管理，与 `Windows` 任务栏类似。
+
 `系统偏好设置 > 程序坞与菜单栏 > 程序坞`
     - `> 将窗口最小化至应用程序图标（勾选）`
     - `> 在程序坞中显示最近使用的应用程序（取消勾选）`
@@ -183,18 +190,34 @@ https://www.macwk.com/article/macos-file-damage
 **添加**：从启动台（应用全列表）拖动图标到程序坞指定位置
 
 
+### 显示器
+
+#### 夜览
+夜览与 [f.lux](https://justgetflux.com) 功能类似，根据时间来自动调节显示器色温的护眼程序。
+
+```
+系统偏好设置 > 显示器 > 夜览... > 设定时间 > 日落到日出
+```
+
+
 ### 菜单栏
+![mac-icon-menu](assets/mac-icon-menu.png)
+
 菜单栏中的系统图标尽量少一点，多留空间给应用图标，尤其是小屏、刘海屏。
 
 #### 时钟
 默认时间格式太长，去除不必要的。
 
-`系统偏好设置 > 程序坞与菜单栏 > 时钟 > 显示日期（取消勾选）、显示星期（取消勾选）、在时间中显示秒钟（勾选）`
+```
+系统偏好设置 > 程序坞与菜单栏 > 时钟 > 显示日期（取消勾选）、显示星期（取消勾选）、在时间中显示秒钟（勾选）
+```
 
 #### 聚焦
 不需要在菜单栏展示，有快捷键 `⌘ + 空格`。
 
-`系统偏好设置 > 程序坞与菜单栏 > 聚焦 > 在菜单栏中显示（取消勾选）`
+```
+系统偏好设置 > 程序坞与菜单栏 > 聚焦 > 在菜单栏中显示（取消勾选）
+```
 
 #### Siri
 不需要在菜单栏展示，可配置快捷键或语音指令。
@@ -202,12 +225,33 @@ https://www.macwk.com/article/macos-file-damage
 `系统偏好设置 > Siri`，自行配置「听取“嘿Siri”」、快捷键等。
 
 
-### Finder
+### 访达（Finder）
+![mac-icon-finder](assets/mac-icon-finder.png)
+
+`访达(Finder)` 是 macOS 中文件可视化管理程序。
 - `访达 → 偏好设置 → 通用 → 开启新“访达”窗口时打开：「下载」`
+
+    设置一个访达启动时的默认打开目录。
 
 - `访达 → 偏好设置 → 通用 → 在标签页中打开文件夹（勾选）`
 
+    开启多标签页功能。
+    （旧版系统不支持，可自行安装 `Path Finder` 或 `TotalFinder` 以使用该功能）
+
 - `访达 → 偏好设置 → 高级 → 执行搜索时：「搜索当前文件夹」`
+
+    默认是搜全电脑文件，但绝大多数我们期望的是搜索当前文件夹下的文件。
+
+### 服务
+`服务` 是 macOS 中服务提供者程序为服务请求者程序提供的便捷服务（便捷入口、且支持设置快捷键）。
+
+例如，`iTerm` 就在 `Finder`
+
+```
+系统偏好设置 → 键盘 → 快捷键 → 服务
+```
+
+可开启所需服务，及设置其快捷键。
 
 
 ## 基础设施
@@ -241,6 +285,8 @@ GitHub: https://github.com/Homebrew/brew
 开源免费、美观高效的最强终端工具。
 
 官网下载: https://www.iterm2.com
+
+或 `brew install --cask iterm2`
 
 
 #### 颜色配置
@@ -300,6 +346,13 @@ open .
 从剪切板粘贴 URL 到 iTerm2 时会被转义。参考官方 [Wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_magic_functions)。打开配置文件 `~/.zshrc`：
 ```ini
 DISABLE_MAGIC_FUNCTIONS=true
+```
+
+#### Finder 中使用 iTerm 打开当前目录
+可在 Finder 中快捷的使用 iTerm 打开当前目录，避免手动的在 iTerm 中输入路径。
+
+```
+Finder → 文件右键 → 服务 → New iTerm2 Tab Here
 ```
 
 
@@ -425,6 +478,12 @@ cat ~/.ssh/id_rsa.pub
     email = jioby@example.com
 ```
 
+或者使用命令行方式：
+```shell
+git config --global user.name "jioby"
+git config --global user.email "jioby@example.com"
+```
+
 
 #### 设置 lg 别名
 `git config --global -e` 打开配置文件：
@@ -433,7 +492,12 @@ cat ~/.ssh/id_rsa.pub
     lg = log --graph --pretty=format:'%Cred%h%Creset | %ad | %Cblue%d%Creset %s %Cgreen(%an)%Creset' --abbrev-commit --date=short
 ```
 
-使用 `git lg` 清爽看日志：
+或者使用命令行方式：
+```shell
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset | %ad | %Cblue%d%Creset %s %Cgreen(%an)%Creset' --abbrev-commit --date=short"
+```
+
+接着可使用 `git lg` 清爽看日志：
 ```shell
 * 5864617 | 2022-07-31 |  (HEAD -> master, origin/master, origin/HEAD) update license to CC 4.0 (Jioby)
 * 3d8de53 | 2022-07-31 |  关闭自动更新，解决nsurlsessiond偷偷跑流量 (shockerli)
@@ -445,11 +509,14 @@ cat ~/.ssh/id_rsa.pub
 ## 系统工具
 
 ### 柠檬清理
-> 腾讯出品开源免费的清理、卸载、流量、监控、磁盘空间分析、开机启动管理等系统工具
+> 腾讯出品开源免费的清理、卸载、流量、监控、磁盘空间分析、开机启动管理等系统工具。
 
 官网下载: https://lemon.qq.com
 
 开源地址: https://github.com/Tencent/lemon-cleaner
+
+最值得使用的功能，莫过于**清理与当前芯片不同版本的二进制文件**：
+![lemon-clean-rosetta](assets/lemon-clean-rosetta.jpg)
 
 
 ### 搜狗输入法
@@ -595,6 +662,7 @@ server_name|192.168.1.110|root|password|port|is_bastion
 | `IntelliJ IDEA Keybindings` | IntelliJ IDEA 快捷键绑定 |
 | `Code Runner` | 快捷运行代码文件 |
 | `EditorConfig for VS Code` | `EditorConfig` 配置扩展，根据配置统一格式化风格 |
+| `PPZ` | 关系型数据库图形管理 |
 
 
 #### Sublime Text
@@ -620,16 +688,19 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `嘀嗒清单`：时间与日程管理（基础免费）
 - `MWeb` / `Typora` / `FSNotes`：Markdown 笔记管理
 - `FastZip/MacZip`：解压缩（免费）
-- `NTFSTool`：NTFS 格式硬盘读写（开源，暂停更，不支持 macOS >= 11.0）
 - `NTFS Disk by Omi`：免费的 NTFS 磁盘读写管理器（支持 M1）
 - `OmniGraffle Pro`：图表/流程图等矢量图绘制
 - `Sketch`：矢量图绘制
 - `Axure RP`：交互原型设计
 - `Reeder`：RSS 订阅
-- `IINA`：音视频播放器（[开源](https://github.com/iina/iina)）
+- `IINA`：[`开源`](https://github.com/iina/iina)音视频播放器
 - `Beyond Compare`：文件/文本对比
-- `Rectangle` - 窗口整理/分屏（[开源](https://github.com/rxhanson/Rectangle)）
+- `Rectangle` - [`开源`](https://github.com/rxhanson/Rectangle)窗口整理/分屏
 - `休息一下`：定时锁屏提醒休息
+- `uTools`：类似 Alfred 的效率工具，跨平台（免费）
+- `Brave Browser`：基于 `Chromium` 的[`开源`](https://github.com/brave/brave-browser)浏览器，号称能更好的保护隐私
+- `Bitwarden`：[`开源`](https://github.com/bitwarden/clients) 密码管理器
+- `Maccy`：[`开源`](https://github.com/p0deje/Maccy)剪切板管理工具
 
 
 
@@ -816,6 +887,37 @@ java8
 ```
 
 
+#### Maven
+- 安装
+
+```shell
+brew install maven
+```
+
+> 如果只使用 `IDEA`，可无需安装，直接使用 IDE 内置的 Maven 即可。
+
+- 国内镜像配置
+
+以 [阿里云 Maven](https://developer.aliyun.com/mvn/guide) 为例。打开或创建配置文件：`$HOME/.m2/settings.xml`，并修改：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <mirrors>
+        <mirror>
+            <!-- 文档: https://developer.aliyun.com/mvn/guide -->
+            <id>aliyunmaven</id>
+            <mirrorOf>*</mirrorOf>
+            <name>阿里云公共仓库</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </mirror>
+    </mirrors>
+</settings>
+```
+
+
 ### PHP
 #### 安装
 
@@ -922,6 +1024,7 @@ brew link --overwrite --force go@1.13
 
 #### 配置
 - 环境变量
+
 ```shell
 export GO111MODULE=on
 export GOPATH=/Users/jioby/gowork
@@ -931,6 +1034,7 @@ export GOPRIVATE=*.your-private-git.com
 ```
 
 - 私有仓库
+
 终端运行命令 `git config --global -e`，添加如下类似配置并保持：
 ```shell
 [url "ssh://git@git.example.com:8182/"]
