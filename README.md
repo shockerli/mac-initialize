@@ -13,7 +13,7 @@
 >
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 >
-> 最后更新于 `2022-09-08`
+> 最后更新于 `2022-09-13`
 
 
 ## 应用安装
@@ -193,7 +193,7 @@ https://www.macwk.com/article/macos-file-damage
 ### 显示器
 
 #### 夜览
-夜览与 [f.lux](https://justgetflux.com) 功能类似，根据时间来自动调节显示器色温的护眼程序。
+夜览与 [f.lux](https://justgetflux.com) 功能类似，根据时间来自动调节显示器色温的护眼程序。不过系统自带夜览只支持内置显示器，外接显示器不会生效，此时可关闭夜览并使用 `f.lux`。
 
 ```
 系统偏好设置 > 显示器 > 夜览... > 设定时间 > 日落到日出
@@ -505,6 +505,13 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset | %ad 
 * 8ebffa3 | 2022-07-30 |  全新指南，支持macOS 12.x系统 (shockerli)
 ```
 
+#### 默认分支
+设置 Git 项目初始化时的默认分支，一般为 `master` 或 `main`。
+
+```shell
+git config --global init.defaultBranch <name>
+```
+
 
 ## 系统工具
 
@@ -682,6 +689,8 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 
 
 ### 其他软件
+- [`f.lux`](https://justgetflux.com)：自动调整屏幕色温的护眼程序（免费）
+- `MonitorControl`：[`开源`](https://github.com/MonitorControl/MonitorControl) 显示器亮度、音量控制，支持外接显示器
 - `万年历`：日历（免费）
 - `网易有道词典`：翻译（免费）
 - `iShot`：截图、长截图、录屏（免费）
@@ -690,8 +699,6 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `FastZip/MacZip`：解压缩（免费）
 - `NTFS Disk by Omi`：免费的 NTFS 磁盘读写管理器（支持 M1）
 - `OmniGraffle Pro`：图表/流程图等矢量图绘制
-- `Sketch`：矢量图绘制
-- `Axure RP`：交互原型设计
 - `Reeder`：RSS 订阅
 - `IINA`：[`开源`](https://github.com/iina/iina)音视频播放器
 - `Beyond Compare`：文件/文本对比
@@ -701,6 +708,7 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `Brave Browser`：基于 `Chromium` 的[`开源`](https://github.com/brave/brave-browser)浏览器，号称能更好的保护隐私
 - `Bitwarden`：[`开源`](https://github.com/bitwarden/clients) 密码管理器
 - `Maccy`：[`开源`](https://github.com/p0deje/Maccy)剪切板管理工具
+- [`FlyKey`](https://www.better365.cn/FlyKey.html) - 应用快捷键展示（免费）
 
 
 
@@ -850,6 +858,15 @@ sdk current java
 // 切换默认版本
 sdk default java x.y.z-open
 ```
+
+##### IDEA
+`IntelliJ IDEA` 提供了 JDK 管理功能，可添加已存在的 JDK，也可代为下载安装所需 JDK。
+
+操作步骤：`MenuBar` → `File` → `Project Structure...`(`⌘ + ;`) → `SDKs` → `+` → `Download JDK`
+
+![idea-jdk-download](assets/idea-jdk-download.jpg)
+
+
 
 ##### JAVA_HOME
 查看已安装版本的 `JAVA_HOME`：
