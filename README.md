@@ -1,11 +1,13 @@
 # Mac 开光指南（V2）
 💻 一份新 macOS 快速食用方法，普适新 Mac 或重装系统。
 
-> 本文基于 MBP 14寸 12.3 系统（**主**）和 MBP 13寸 11.4 系统。
+> 本指南基于 MBP 14寸 12.3 系统（**主**）和 MBP 13寸 11.4 系统。
 >
 > 系统和软件的更新频繁，本项目不一定及时更新，故操作界面或步骤会略有差别，但影响不大。
 >
 > 本指南涉及内容较广，请选择适合自己的操作。
+> 
+> 请善用 TOC 目录导航内容，GitHub 中 `README.md` 左侧的按钮更方便。
 >
 > 本指南遵循许可协议 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)（请看[转载要求](https://shockerli.net/reprint-protocol)）
 >
@@ -13,7 +15,7 @@
 >
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 >
-> 最后更新于 `2022-09-14`
+> 最后更新于 `2022-09-21`
 
 
 ## 应用安装
@@ -59,6 +61,7 @@
 - iCloud 正在同步数据
 
 
+
 ## 键盘符号与快捷键
 ### 符号映射
 | 符号 | 按键 |
@@ -96,42 +99,53 @@
 
 | 快捷键 | 说明 |
 | --- | --- |
-| Command - Z | 撤销，Shift-Command-Z：重做 |
-| Command - 逗号 (`,`) | 打开当前窗口应用的**偏好设置** |
-| Control - Command - Q | 立即锁定屏幕 |
-| Command - D | 复制所选文件 |
-| Option - Command-D | 显示或隐藏“程序坞” |
-| Control - Command - D | 显示或隐藏所选字词的定义 |
-| Control - A | 移至行或段落的开头 |
-| Control - E | 移至行或段落的末尾 |
-| Control - U | 终端软件里，直接清除行 |
-| Control - 空格 | 切换输入法 |
-| Command - Q | 退出当前应用 |
+| Command + Z | 撤销，`Shift + Command + Z`：重做 |
+| Command + 逗号 (`,`) | 打开当前窗口应用的**偏好设置** |
+| Control + Command + Q | 立即锁定屏幕 |
+| Command + D | 复制所选文件 |
+| Option + Command + D | 显示或隐藏“程序坞” |
+| Control + Command + D | 显示或隐藏所选字词的定义 |
+| Control + A | 移至行或段落的开头 |
+| Control + E | 移至行或段落的末尾 |
+| Control + U | 终端软件里，直接清除行 |
+| Control + 空格 | 切换输入法 |
+| Command + Q | 退出当前应用 |
 
 - 访达
 
 | 快捷键 | 说明 |
 | --- | --- |
-| Command - 上箭头 | 打开包含当前文件夹的文件夹 |
-| Command - 左中括号 (`[`) | 前往上一文件夹 |
-| Command - 右中括号 (`]`) | 前往下一个文件夹 |
-| Command - Delete | 将所选项移到废纸篓 |
+| Command + 上箭头 | 打开包含当前文件夹的文件夹 |
+| Command + 左中括号 (`[`) | 前往上一文件夹 |
+| Command + 右中括号 (`]`) | 前往下一个文件夹 |
+| Command + Delete | 将所选项移到废纸篓 |
+| Option + Command + C | 复制当前目录的全路径 |
 
 - 窗口
 
 | 快捷键 | 说明 |
 | --- | --- |
-| Command - Tab | 在多个打开的 App 之间切换到**下一个**最近使用的 App |
-| Command - Shift - Tab | 在多个打开的 App 之间切换到**上一个**最近使用的 App |
-| Command - `（反引号） | 同一个应用的不同窗口间切换，已被最小化的窗口无法恢复 |
-| Command - M | 最小化当前窗口，但无法通过快捷键切换回来，只能手动去菜单栏或程序坞重新打开 |
-| Command - H | 隐藏当前应用，即该应用的所有窗口，可通过快捷键切换回来 |
-| Command - Option - H | 隐藏其他应用 |
+| Command + Tab | 在多个打开的 App 之间切换到**下一个**最近使用的 App |
+| Command + Shift + Tab | 在多个打开的 App 之间切换到**上一个**最近使用的 App |
+| Command + `（反引号） | 同一个应用的不同窗口间切换，已被最小化的窗口无法恢复 |
+| Command + M | 最小化当前窗口，但无法通过快捷键切换回来，只能手动去菜单栏或程序坞重新打开 |
+| Command + H | 隐藏当前应用，即该应用的所有窗口，可通过快捷键切换回来 |
+| Command + Option + H | 隐藏其他应用 |
 | F3 | 显示当前桌面的所有已打开窗口（不含最小化或已隐藏） |
-| Control - 上箭头 | 同上 |
+| Control + 上箭头 | 同上 |
 | 触控板：四指向上轻扫 | 同上（如已设置`触控板 → 更多手势 → 调度中心`） |
-| Control - 下箭头 | 显示当前应用的所有已打开窗口（不含最小化或已隐藏） |
+| Control + 下箭头 | 显示当前应用的所有已打开窗口（不含最小化或已隐藏） |
 | 触控板：四指向下轻扫 | 同上（如已设置`触控板 → 更多手势 → App Expose`） |
+
+- 桌面
+
+| 快捷键 | 说明 |
+| --- | --- |
+| Control + 右箭头 | 向右切换桌面 |
+| 触控板：四指向右轻扫 | 同上 |
+| Control + 左箭头 | 向左切换桌面 |
+| 触控板：四指向左轻扫 | 同上 |
+
 
 其他快捷键：选取苹果菜单 > “系统偏好设置”，点按“键盘”，然后点按“快捷键”。
 
@@ -162,25 +176,36 @@
 ### 开启任何来源
 为何要「任何来源」权限？因为不开启就无法安装 `App Store` 以外的软件，比如从网站直接下载的 dmg 安装包。
 
-现在的 `macOS` 都有 `SIP` 保护，需要在终端执行以下命令关闭：
+`被认可的开发者` 指的是购买了苹果企业证书对应用进行签名、且提交给苹果审核通过的软件。而大部分免费开源的应用是不会去购买此证书的。另外，破解应用因为会修改应用的文件从而导致签名失效而无法运行。所以，想安装第三方应用，需要开启 `任何来源` 这个权限。
+
+`macOS` 默认隐藏了 `任何来源` 选项，需要在终端执行以下命令显示此选项：
 
 ```shell
 sudo spctl --master-disable
 ```
 
-然后才可以打开`任何来源`：`系统偏好设置 > 安全性与隐私 > 通用 > 任何来源`
+然后在 `系统偏好设置 > 安全性与隐私 > 通用 > 任何来源` 打开：
 
-关于其他一些软件无法安装的问题，可参考这篇文章：
+![install-any-source-app](assets/install-any-source-app.jpg)
 
-https://www.macwk.com/article/macos-file-damage
 
 
 ### 修改主机名
-> 就是为了好看点，默认的太丑，隔空投送的显示名字
+> 就是为了好看点，默认的太丑，隔空投送的显示名字和终端都会用到
 
 参考文章: https://shockerli.net/post/macos-hostname-scutil/
 
-`系统偏好设置 > 共享` => 修改`电脑名称`、编辑`本地主机名`
+设置路径：`系统偏好设置 > 共享` => 修改`电脑名称`、编辑`本地主机名`
+
+也可通过命令修改：
+
+```shell
+# 修改主机名
+sudo scutil --set HostName 自定义主机名
+
+# 修改电脑名称
+sudo scutil --set ComputerName 自定义电脑名
+```
 
 
 ### 拼写辅助
@@ -262,6 +287,27 @@ https://www.macwk.com/article/macos-file-damage
 
     默认是搜全电脑文件，但绝大多数我们期望的是搜索当前文件夹下的文件。
 
+- 开启 `退出访达` 功能
+
+    一般都应用都能退出（`⌘ + Q`），但访达默认是不行的，需手动开启。
+    
+    ```shell
+    defaults write com.apple.finder QuitMenuItem -bool true
+    
+    killall Finder
+    ```
+
+- 显示目录全路径
+
+    `Finder` 顶栏默认显示的是当前目录的名称，如需跟 Windows 一样显示全路径，需手动开启。
+
+    ```shell
+    defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+    
+    killall Finder
+    ```
+    
+
 ### 服务
 `服务` 是 macOS 中服务提供者程序为服务请求者程序提供的便捷服务（便捷入口、且支持设置快捷键）。
 
@@ -272,6 +318,35 @@ https://www.macwk.com/article/macos-file-damage
 ```
 
 可开启所需服务，及设置其快捷键。
+
+
+### 密码长度限制
+macOS 10.14 后不允许设置 4 位数以下的密码。下面的命令可关闭这个策略的限制：
+
+```shell
+pwpolicy -clearaccountpolicies
+```
+
+
+### 开机自启管理
+用户级别的开机自启应用管理，可在 `系统偏好设置 → 用户与群组 → 登录项` 列表中查看和开关。
+
+系统级别的，比如 `Docker`，可用 `柠檬清理` 等系统工具进行管理。
+
+如果是通过 `Homebrew` 安装的服务，那可用 `brew services` 命令管理。
+
+也可以通过命令 `launchctl` 进行管理。
+
+
+### 关于 SIP
+SIP（`System Integrity Protection`，系统完整性保护）是 macOS 所采用的一项安全技术，能够帮助防止潜在恶意软件修改 macOS 上受保护的文件和文件夹。系统完整性保护可以限制 `root` 用户帐户，以及 `root` 用户能够在 macOS 的受保护部分完成的操作。
+
+为了安全，**强烈不建议**关闭 `SIP` 保护。
+
+如果一个应用需要关闭 SIP 才可运行，这意味着此应用本身也不安全，可直接放弃。
+
+如果是临时性的需要（如上文提到的删除系统更新文件），可以先关闭、操作完后再立即开启。
+
 
 
 ## 基础设施
