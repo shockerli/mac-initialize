@@ -15,7 +15,7 @@
 >
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 >
-> 最后更新于 `2022-09-21`
+> 最后更新于 `2022-09-27`
 
 
 ## 应用安装
@@ -452,16 +452,18 @@ Finder → 文件右键 → 服务 → New iTerm2 Tab Here
 
 
 ### Oh My Zsh
-`Oh My Zsh` 让 zsh 变得更好用、配置更简单。
+`Oh My Zsh` 让 `zsh` 变得更好用、配置更简单。（macOS 10.15 后已使用 `zsh` 作为默认 Shell）
 
 GitHub: https://github.com/ohmyzsh/ohmyzsh
 
 - 通过`curl`安装
+
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 - 设置 `zsh` 为当前用户的默认 `Shell`
+
 ```shell
 chsh -s /bin/zsh
 ```
@@ -483,6 +485,15 @@ chsh -s /bin/zsh
 .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes]
 ```
 
+
+#### 配置
+- 禁用自动更新
+
+    默认会每次新开 Tab 时检查更新，编辑 `~/.zshrc`，取消该行内容的注释：
+    
+    ```shell
+    zstyle ':omz:update' mode disabled
+    ```
 
 #### 插件
 
@@ -608,10 +619,43 @@ git config --global init.defaultBranch <name>
 ```
 
 
+### Vim
+在 macOS 上 `Vim` 使用较浅，故配置够用即可，不装扩展。直接 `vim ~/.vimrc`：
+
+```vim
+" 推荐设置
+colorscheme desert  " 颜色显示方案
+syntax on           " 打开语法高亮
+set tabstop=4       " TAB 字符的显示宽度
+
+" 以下自选
+set nocompatible    " 不兼容 Vi
+set nu              " 显示行号
+set showmatch       " 自动高亮匹配括号
+set cursorline      " 高亮光标所在行
+set hlsearch        " 高亮搜索匹配结果
+set incsearch       " 跟随输入，即时搜索
+set ignorecase      " 搜索忽略大小写
+set history=1000    " 历史操作记录次数
+set autoread        " 文件发生外部变更时提示
+set wildmenu        " 命令模式，底部按 Tab 自动补全
+set smartindent     " 智能缩进
+set expandtab       " 按 Tab 键时，使用空格替代制表符（不影响已有制表符）
+set shiftwidth=4    " 自动缩进时，缩进长度
+set softtabstop=-1  " Tab 转为多少空格，负数表示与shiftwidth一致
+set laststatus=2    " 是否显示状态栏, 0:不显示, 1:多窗口时显示, 2:显示
+set ruler           " 这状态栏显示光标的当前位置（行数&列数）
+set wrap            " 自动换行
+```
+
+`colorscheme` 可选项在 `/usr/share/vim/vim*/colors` 目录下，自己选。
+
+
+
 ## 系统工具
 
 ### 柠檬清理
-> 腾讯出品开源免费的清理、卸载、流量、监控、磁盘空间分析、开机启动管理等系统工具。
+> 腾讯出品**开源免费**的清理、卸载、流量、监控、磁盘空间分析、开机启动管理等系统工具。
 
 官网下载: https://lemon.qq.com
 
@@ -621,10 +665,12 @@ git config --global init.defaultBranch <name>
 ![lemon-clean-rosetta](assets/lemon-clean-rosetta.jpg)
 
 
-### 搜狗输入法
+### 输入法
+拼音输入法推荐 `搜狗输入法`，简单易用、词库齐全、安装即用。
+
 官网下载: https://pinyin.sogou.com/mac/
 
-输入法配置：`系统偏好设置 > 键盘 > 输入法`：删除无用的输入法
+输入法配置：`系统偏好设置 > 键盘 > 输入法`：删除无用的输入法（`ABC` 别删）
 
 同步原配置：`偏好设置 > 登录账户 > 同步 > 配置同步 > 下载配置`
 
@@ -805,6 +851,7 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `Maccy`：[`开源`](https://github.com/p0deje/Maccy)剪切板管理工具
 - [`FlyKey`](https://www.better365.cn/FlyKey.html) - 应用快捷键展示（免费）
 
+还有很多优秀软件没有推荐，后续单开一个专门介绍。
 
 
 ## 开发环境
