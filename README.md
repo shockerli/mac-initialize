@@ -1,7 +1,7 @@
 # Mac 开光指南（V2）
 💻 一份新 macOS 快速食用方法，普适新 Mac 或重装系统。
 
-> 本指南基于 MBP 14寸 12.3 系统（**主**）和 MBP 13寸 11.4 系统。
+> 本指南基于 MBP 14寸 12.5 系统（**主**）和 MBP 13寸 11.4 系统。
 >
 > 系统和软件的更新频繁，本项目不一定及时更新，故操作界面或步骤会略有差别，但影响不大。
 >
@@ -15,7 +15,7 @@
 >
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 >
-> 最后更新于 `2022-09-27`
+> 最后更新于 `2023-03-01`
 
 
 ## 应用安装
@@ -161,6 +161,11 @@
     * `轻点来点按（勾选）`
     * <u>可单指轻点=鼠标左键点击，可双指轻点=鼠标右键点击</u>
 
+- `系统偏好设置 > 触控板 > 光标与点按`
+    * `查询与数据检测器（勾选）`
+    * `三指轻点`
+    * <u>对着词汇三指轻点，直接调用Mac自带词典查询，与右键中的「查询」一样</u>
+
 - `系统偏好设置 > 触控板 > 更多手势`
     * `App Expose（勾选）`
     * `在全屏幕显示的App之间轻扫（四指左右轻扫）`
@@ -229,6 +234,8 @@ sudo scutil --set ComputerName 自定义电脑名
 从程序坞中挨个移除你不行要的应用图标，以及添加你希望常驻的图标。
 
 **移除**：`右键程序坞中应用图标 > 选项 > 从程序坞中移除`
+
+或者将程序坞中的图标拖到废纸篓中也能删除图标。
 
 ![移除程序坞图标](assets/remove-dock-icon.png)
 
@@ -687,7 +694,6 @@ set wrap            " 自动换行
 - [Tampermonkey](https://www.tampermonkey.net): 油猴脚本管理
 - [ImageAssistant](http://www.pullywood.com/ImageAssistant): 图片助手，网页图片提取下载
 - [SourceGraph](https://sourcegraph.com): GitHub 源码浏览神器
-- iGG: 谷歌学术助手
 
 
 #### 油猴脚本
@@ -740,27 +746,6 @@ alias egrep='ps -ef | grep'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 ```
 
-
-### Vim
-`~/.vimrc` 简单配置：
-
-```vim
-syntax on
-set runtimepath+=~/.vim_runtime
-set nocompatible
-set history=1000
-set autoindent
-set cindent
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set showmatch
-set guioptions-=T
-set vb t_vb=
-set ruler
-set incsearch
-```
 
 
 ### autossh
@@ -834,7 +819,7 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `MonitorControl`：[`开源`](https://github.com/MonitorControl/MonitorControl) 显示器亮度、音量控制，支持外接显示器
 - `万年历`：日历（免费）
 - `网易有道词典`：翻译（免费）
-- `iShot`：截图、长截图、录屏（免费）
+- `iShot`：截图、长截图、录屏（基础免费）
 - `嘀嗒清单`：时间与日程管理（基础免费）
 - `MWeb` / `Typora` / `FSNotes`：Markdown 笔记管理
 - `FastZip/MacZip`：解压缩（免费）
@@ -844,12 +829,13 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `IINA`：[`开源`](https://github.com/iina/iina)音视频播放器
 - `Beyond Compare`：文件/文本对比
 - `Rectangle` - [`开源`](https://github.com/rxhanson/Rectangle)窗口整理/分屏
-- `休息一下`：定时锁屏提醒休息
 - `uTools`：类似 Alfred 的效率工具，跨平台（免费）
 - `Brave Browser`：基于 `Chromium` 的[`开源`](https://github.com/brave/brave-browser)浏览器，号称能更好的保护隐私
 - `Bitwarden`：[`开源`](https://github.com/bitwarden/clients) 密码管理器
 - `Maccy`：[`开源`](https://github.com/p0deje/Maccy)剪切板管理工具
 - [`FlyKey`](https://www.better365.cn/FlyKey.html) - 应用快捷键展示（免费）
+- `Parallels Desktop` - 虚拟机
+- AlDente - 电源管理，让电池更耐用（基础免费）
 
 还有很多优秀软件没有推荐，后续单开一个专门介绍。
 
