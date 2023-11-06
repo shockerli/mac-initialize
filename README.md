@@ -15,7 +15,7 @@
 >
 > 长期更新地址: https://github.com/shockerli/mac-initialize
 >
-> 最后更新于 `2023-03-01`
+> 最后更新于 `2023-11-06`
 
 
 ## 应用安装
@@ -343,6 +343,16 @@ pwpolicy -clearaccountpolicies
 如果是通过 `Homebrew` 安装的服务，那可用 `brew services` 命令管理。
 
 也可以通过命令 `launchctl` 进行管理。
+
+
+### 关闭输入法切换时的提示图标
+> 自 macOS 14 Sonoma 开始，默认会在切换输入法时，光标处有个提示图标。
+> 
+> 在终端类软件中，执行以下指令，并按提示输入电脑密码，然后重启电脑后关闭该提示。
+
+```shell
+sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor -dict-add Enabled -bool NO
+```
 
 
 ### 关于 SIP
@@ -835,7 +845,9 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 - `Maccy`：[`开源`](https://github.com/p0deje/Maccy)剪切板管理工具
 - [`FlyKey`](https://www.better365.cn/FlyKey.html) - 应用快捷键展示（免费）
 - `Parallels Desktop` - 虚拟机
-- AlDente - 电源管理，让电池更耐用（基础免费）
+- `AlDente` - 电源管理，让电池更耐用（基础免费）
+- [warp](https://github.com/warpdotdev/Warp) - 号称下一代终端神器（免费）
+- `Bartender` - 菜单栏图标管理
 
 还有很多优秀软件没有推荐，后续单开一个专门介绍。
 
