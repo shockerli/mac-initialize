@@ -778,10 +778,11 @@ server_name|192.168.1.110|root|password|port|is_bastion
 - `Navicat Premium`: 多种数据库管理工具
 - `Sourcetrail`: 源码阅读神器（[开源](https://github.com/CoatiSoftware/Sourcetrail)）
 - `Jetbrains IDE 系列`
-- `Postman`: 接口调试（免费）
+- `Postman`: 接口调试（免费）([免费](https://github.com/JianLin-Li/Postman-cn))
 - `htop`: 增强版 `top` 命令（[开源](https://github.com/htop-dev/htop)）
 - `Visual Studio Code`: 强大的编辑器（[开源](https://code.visualstudio.com)）
 - `Proxyman`: 代理抓包工具（免费）
+- `OmniGraffle Pro`:强大的图形工具([免费](https://xclient.info/s/omnigraffle.html#versions))
 
 
 #### Visual Studio Code
