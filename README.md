@@ -691,6 +691,15 @@ set wrap            " 自动换行
 
 同步原配置：`偏好设置 > 登录账户 > 同步 > 配置同步 > 下载配置`
 
+#### KeyboardHolder
+解决安装第三方输入法后，输入法经常被切换为`ABC`的问题。
+
+应用简介：KeyboardHolder是一个macOS系统的输入法切换辅助工具。就是它能够在应用切换过程中帮助你自动切换到合适的输入法，免去了应用切换后输入法不对应的烦恼。
+
+官网下载：https://keyboardholder.leavesc.com/zh-cn/
+
+开源地址：https://github.com/leaves615/KeyboardHolder
+
 
 ### Chrome
 官网下载: https://www.google.cn/intl/zh-CN/chrome/
@@ -823,6 +832,13 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 
 然后就可以使用 `subl [path]` 快捷打开文件或目录。
 
+### Contexts 窗口切换器
+
+官网：https://contexts.co/
+
+应用简介：毫不费力地在应用程序窗口之间切换——使用快速搜索、更好的 Command-Tab、边栏甚至快速手势。包括适用于多个空间和多个显示器的奇妙功能。
+
+![contexts-introduction](assets/contexts-introduction.jpg)
 
 ### 其他软件
 - [`f.lux`](https://justgetflux.com)：自动调整屏幕色温的护眼程序（免费）
